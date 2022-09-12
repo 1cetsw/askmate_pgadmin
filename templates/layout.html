@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_list.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+
+<body>
+<center><h1><img src="/static/images/ask_logo.png" width="20%" height="20%"></h1></center>
+    {% block body %} {% endblock %}
+</body>
+<footer>
+    {% block fooster %} <center><footer id="STOPKA">Project CodeCool 2022</footer></center> {% endblock %}
+</footer>
+</html>

@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block title %}SAVED QUESTION{% endblock %} {% block head %} {{ super() }} {% endblock %}
+
+{% block body %}
+   <h1>Saved Question</h1>
+   <p><a href="{{ url_for('route_list') }}">Back to Question List</a></p>
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+{% endblock %}

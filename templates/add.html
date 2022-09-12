@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block title %}Add New Question{% endblock %} {% block head %} {{ super() }} {% endblock %}
+
+{% block body %}
+<h1>Add User Question</h1><br>
+<form action="{{ url_for('result') }}" method="post">
+
+    <br><br>
+    <label>Submission Time:<br>
+        <input type="number" min="1000000000" max="9999999999" name="submission_time">
+    </label>
+    <br><br>
+    <label>View Number:<br>
+        <input type="number" min="1" max="9999999999" name="view_number">
+    </label>
+    <br><br>
+    <label>Vote Number:<br>
+        <input type="number" min="1" max="9999999999" name="vote_number">
+    </label>
+    <br><br>
+    <label>Question Title:<br>
+        <input type="text" minlength="5" required name="title">
+    </label>
+    <br><br>
+    <label>Message:<br>
+        <textarea rows="5" cols="50" required name="message"></textarea>
+    </label>
+    <br><br>
+    <label>Image:<br>
+{#        <iframe src="http://127.0.0.1:5000/upload" width="300" height="60" required name="image"> </iframe>#}
+
+    </label>
+    <br><br>
+    <input type="submit" value="Add new User Story">
+</form>
+
+{% endblock %}

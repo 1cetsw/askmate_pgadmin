@@ -1,0 +1,52 @@
+
+td, th {
+    border: 2px solid black;
+}
+
+::selection {
+    color: #fff;
+    background: #FCBA7F;
+}
+body {
+    background-image: url("/static/images/background_list.jpg");
+    width: 99%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: lightgrey;
+    color: black;
+}
+h2 {
+    margin: 5px;
+    padding: 5px;
+}
+table {
+    margin: 1px;
+    padding: 1px;
+    color: black;
+    border-collapse: collapse;
+    margin-right: 16px;
+}
+up {
+     position: relative;
+  left: 10px;
+}
+down {
+     position: relative;
+     left: 10px;
+}
+footer{
+    font-size: 30px;
+}
+
+
+h1{
+    margin: 5px;
+    padding: 5px;
+
+    color: black;
+    text-align: center;
+}
+upload {
+    background-color: #177199;
+}

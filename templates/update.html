@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block title %}UPDATE{% endblock %} {% block head %} {{ super() }} {% endblock %}
+
+{% block body %}
+<h1>Edit User Question</h1><br>
+<form action="{{ url_for('route_edit_result') }}" method="post">
+    <label>Id:<br>
+        <input type="number" required name="id" value="{{ result.id }}">
+    </label>
+    <br><br>
+    <label>Submission Time:<br>
+        <input type="number" min="1000000000" max="9999999999" name="submissiontime"
+               value="{{ result.submissiontime }}">
+    </label>
+    <br><br>
+    <label>View Number:<br>
+        <input type="number" min="1" max="9999999999" name="viewnumber" value="{{ result.viewnumber }}">
+    </label>
+    <br><br>
+    <label>Vote Number:<br>
+        <input type="number" min="1" max="9999999999" name="votenumber" value="{{ result.votenumber }}">
+    </label>
+    <br><br>
+    <label>Question Title:<br>
+        <textarea rows="4" cols="50" required name="title">{{ result.title }}</textarea>
+    </label>
+    <br><br>
+    <label>Message:<br>
+        <textarea rows="4" cols="50" required name="message">{{ result.message }}</textarea>
+    </label>
+    <br><br>
+    <label>Image:<br>
+
+{#        <iframe src="http://127.0.0.1:5000/upload" width="300" height="60"  name="image">{{ result.image }}></iframe>#}
+
+    </label>
+    <br><br>
+    <input type="submit" value="Update User Question">
+</form>
+{% endblock %}
